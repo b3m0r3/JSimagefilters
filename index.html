@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myProject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="SimpleImage.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <main id="content" class="content">
+
+        <div class="filters_menu">
+                <ul class="filters_ul">
+                    <li class="filters_li">
+                        <label data-title="UPLOAD IMAGE" for="finput" class="upload icon"></label>
+                        <input type="file" accept="image/*" id="finput" onchange="upload()">
+                    </li>
+                    <li class="filters_li">
+                        <label data-title="GRAYSCALE" for="grayscale" class="greyscale icon"></label>
+                        <input id="grayscale" type="button" value="Grey" onclick="makeGray()">
+                    </li>
+                    <li class="filters_li">
+                        <label data-title="SEPIA" for="sepia" class="sepia icon"></label>
+                        <input id="sepia" type="button"  onclick="makeSepia()">
+                    </li>
+                    <li class="filters_li">
+                        <label data-title="CONTRAST++" for="addcontrast" class="addcontrast icon"></label>
+                        <input id="addcontrast" type="button" onclick="addContrast()">
+                    </li>
+                    <li class="filters_li">
+                        <label data-title="CONTRAST--" for="removecontrast" class="removecontrast icon"></label>
+                        <input id="removecontrast" type="button" onclick="removeContrast()">
+                    </li>
+                    <li class="filters_li">
+                        <label data-title="UNDO CHANGES" for="reset" class="reset icon"></label>
+                        <input id="reset" type="button" onclick="resetChanges()">
+                    </li>
+                </ul>
+            </div>
+
+        <div class="canvas-container">
+            <label data-title="UPLOAD IMAGE" id="center" for="finput" class="upload icon center"></label>
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: proxima, Arial, sans-serif ;
+    font-size: 30px;
+    color: #000;
+    overflow-wrap: break-word; /*перенос слов на новую строку*/
+    background-image: url(../img/bg.jpg) ;
+}
+
+.content{
+    padding-top: 2vh;
+}
+
+.canvas-container{
+    display: flex;
+}
+
+#canvas{
+    display: none;
+    padding-top: 2vh;
+    margin: auto;
+    height: 86vh;
+}
+
+.filters_menu{
+    margin: auto;
+    width: 50%;
+    min-width: 500px;
+    text-align: center;
+}
+
+.filters_ul{
+}
+
+.filters_li{
+    list-style: none;
+    display: inline;
+}
+
+.filter_button{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="button"] {
+    display: none;
+}
+
+
+
+.upload{
+    background: url("../img/upload.png") no-repeat;
+}
+
+.greyscale{
+    background: url("../img/gs.png") no-repeat;
+}
+
+.sepia{
+    background: url("../img/sepia.png") no-repeat;
+}
+
+.reset{
+    background: url("../img/reset.png") no-repeat;
+}
+
+.addcontrast{
+    background: url("../img/addcontrast.png") no-repeat;
+}
+.removecontrast{
+    background: url("../img/removecontrast.png") no-repeat;
+}
+.icon{
+    display: inline-block;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    background-size: contain;
+    opacity: 0.8;
+}
+
+.icon:hover{
+    opacity: 1;
+}
+
+.center{
+    width: 100px;
+    height: 100px;
+    margin: 30vh auto auto ;
+}
+
+[data-title] {
+    position: relative;
+    cursor: help;
+}
+
+[data-title]:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -30px;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+[data-title]:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 38px;
+    display: inline-block;
+    color: #fff;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #000;
+}
